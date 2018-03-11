@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class='container'>
+        <div class='header clearfix'>
+            <div class="logo">山寨画板</div>
+        </div>
+        <div class='main-box'>
+            <div class='tool-box'>
+                <div class='tool-item'>
+                    <img src="./imgs/a.svg" alt="">
+                </div>
+                <div class='tool-item'>
+                    <img src="./imgs/benzene.svg" alt="">
+                </div>
+                <div class='tool-item rect'>
+                    <img src="./imgs/cyclobutane.svg" alt="">
+                </div>
+                <div class='tool-item polygon-6'>
+                    <img src="./imgs/cyclohexane.svg" alt="">
+                </div>
+                <div class='tool-item '>
+                    <img src="./imgs/cycloheptane.svg" alt="">
+                </div>
+                <div class='tool-item polygon-3'>
+                    <img src="./imgs/cyclopropane.svg" alt="">
+                </div>
+                <div class='tool-item'>
+                    <img src="./imgs/move.svg" alt="">
+                </div>
+            </div>
+            <div class='top-tool'>
+                <div class='top-tool-item'>
+                    <img src="./imgs/zoomin.svg" alt="">
+                </div>
+                <div class='top-tool-item'>
+                    <img src="./imgs/zoomout.svg" alt="">
+                </div>
+                <div class='top-tool-item clearBoth'>
+                    <img src="./imgs/clear.svg" alt="">
+                </div>
+            </div>
+            <div class='canvas'>
+                <canvas id='canvas' class='main-canvas'></canvas>
+            </div>
+        </div>
+    </div>	
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        window.onload = function(){
+            var getCanvasSize = function(){
+                var canvas_with = $(".canvas").width();
+                var canvas_height = $(".canvas").height();
+                canvas=document.getElementsByTagName('canvas')[0];
+                canvas.width = canvas_with;
+                canvas.height= canvas_height;
+            }
+            getCanvasSize();
+        }
+    </script>
+    <script src='./js/jcanvas.min.js'></script>
+    <script src='./js/xboard.js'></script>
+    <script src='./js/index.js'></script>
+</body>
+</html>

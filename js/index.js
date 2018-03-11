@@ -1,0 +1,42 @@
+var IDX = IDX || {};
+var Xboard = new Xboard();
+IDX = {
+    init:function(){
+        IDX.toolItemClickOn();
+        IDX.getRect();
+        IDX.drawPolygon6();
+        IDX.drawPolygon3();
+        $(".clearBoth").on("click",function(){
+            IDX.clearBoth();
+        })
+    },
+    toolItemClickOn:function(){
+        $(".tool-item").on("click",function(){
+            $(this).addClass("hasClick").siblings().removeClass("hasClick");
+        })
+    },
+    clearBoth:function(){
+        $('canvas').removeLayer('polygan-3').drawLayers();
+        $('canvas').removeLayer('polygan-4').drawLayers();
+        $('canvas').removeLayer('polygan-6').drawLayers();
+    },
+    //绘制矩形
+    getRect:function(){
+        $(".rect").on("click",function(){
+            Xboard.getRect();
+        })
+    },
+    //绘制六边形
+    drawPolygon6:function(){
+        $(".polygon-6").on("click",function(){
+            Xboard.drawPolygon6();
+        })
+    },
+    //绘制三角形
+    drawPolygon3:function(){
+        $(".polygon-3").on("click",function(){
+            Xboard.drawPolygon3();
+        })
+    }
+}
+IDX.init();
